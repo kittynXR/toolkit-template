@@ -1,0 +1,80 @@
+{
+  "package": {
+    "name": "cat.kittyn.mypackage",
+    "displayName": "My Unity Package",
+    "version": "1.0.0",
+    "description": "A Unity package for VRChat",
+    "author": {
+      "name": "kittyn",
+      "email": "cat@kittyn.cat",
+      "url": "https://kittyn.cat"
+    },
+    "unity": "2019.4",
+    "unityRelease": "31f1",
+    "vpmDependencies": {
+      "com.vrchat.avatars": ">=3.7.0"
+    },
+    "dependencies": {},
+    "keywords": ["vrchat", "unity", "tool"],
+    "license": "MIT",
+    "documentationUrl": "https://github.com/yourusername/mypackage#readme",
+    "changelogUrl": "https://github.com/yourusername/mypackage/releases",
+    "samples": []
+  },
+  "repository": {
+    "owner": "yourusername",
+    "name": "mypackage",
+    "defaultBranch": "main",
+    "ghPagesUrl": "https://mypackage.kittyn.cat/index.json"
+  },
+  "build": {
+    "rootDirectory": "MyPackage",
+    "excludePatterns": [
+      "*.meta",
+      ".git*",
+      "*.md",
+      "*.yml",
+      "*.sh",
+      "package-lock.json",
+      "node_modules",
+      "scripts",
+      ".github",
+      "source.json"
+    ],
+    "assemblyDefinitions": {
+      "editor": {
+        "name": "MyPackage.Editor",
+        "rootNamespace": "MyPackage.Editor",
+        "references": [
+          "VRC.SDK3A",
+          "VRC.SDK3A.Editor"
+        ]
+      },
+      "runtime": {
+        "name": "MyPackage.Runtime",
+        "rootNamespace": "MyPackage",
+        "references": [
+          "VRC.SDKBase"
+        ]
+      }
+    },
+    "unityPackageName": "MyPackage"
+  },
+  "vpm": {
+    "id": "cat.kittyn.mypackage",
+    "url": "https://github.com/yourusername/mypackage/releases/download/v{VERSION}/cat.kittyn.mypackage-{VERSION}.zip",
+    "includeInVRCListing": true
+  },
+  "features": {
+    "ndmf": false,
+    "harmony": false,
+    "separateRuntimeAssembly": false,
+    "samples": false
+  },
+  "automation": {
+    "createGitTags": true,
+    "createGitHubReleases": true,
+    "deployToGitHubPages": true,
+    "preserveVersionHistory": true
+  }
+}

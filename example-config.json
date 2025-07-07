@@ -1,0 +1,80 @@
+{
+  "package": {
+    "name": "cat.kittyn.example-package",
+    "displayName": "Example Package",
+    "version": "1.0.0",
+    "description": "An example Unity package for VRChat",
+    "type": "Any",
+    "author": {
+      "name": "kittyn",
+      "email": "cat@kittyn.cat",
+      "url": "https://kittyn.cat"
+    },
+    "unity": "2019.4",
+    "unityRelease": "31f1",
+    "vpmDependencies": {
+      "com.vrchat.base": ">=3.7.0"
+    },
+    "dependencies": {},
+    "keywords": ["vrchat", "unity", "tool"],
+    "license": "MIT",
+    "documentationUrl": "https://github.com/kittynXR/example-package#readme",
+    "changelogUrl": "https://github.com/kittynXR/example-package/releases",
+    "samples": []
+  },
+  "repository": {
+    "owner": "kittynXR",
+    "name": "example-package",
+    "defaultBranch": "main",
+    "ghPagesUrl": "https://example-package.kittyn.cat/index.json"
+  },
+  "build": {
+    "rootDirectory": "cat.kittyn.example-package",
+    "excludePatterns": [
+      "*.meta",
+      ".git*",
+      "*.md",
+      "*.yml",
+      "*.sh",
+      "package-lock.json",
+      "node_modules",
+      "scripts",
+      ".github",
+      "source.json"
+    ],
+    "assemblyDefinitions": {
+      "editor": {
+        "name": "cat.kittyn.example-package.Editor",
+        "rootNamespace": "cat.kittyn.example-package.Editor",
+        "references": [
+          "VRC.SDK3A",
+          "VRC.SDK3A.Editor"
+        ]
+      },
+      "runtime": {
+        "name": "cat.kittyn.example-package.Runtime",
+        "rootNamespace": "cat.kittyn.example-package",
+        "references": [
+          "VRC.SDKBase"
+        ]
+      }
+    }
+  },
+  "vpm": {
+    "id": "cat.kittyn.example-package",
+    "url": "https://github.com/kittynXR/example-package/releases/download/v{VERSION}/cat.kittyn.example-package-{VERSION}.zip",
+    "includeInVRCListing": true
+  },
+  "features": {
+    "ndmf": false,
+    "harmony": false,
+    "separateRuntimeAssembly": false,
+    "samples": false
+  },
+  "automation": {
+    "createGitTags": true,
+    "createGitHubReleases": true,
+    "deployToGitHubPages": true,
+    "preserveVersionHistory": true
+  }
+}

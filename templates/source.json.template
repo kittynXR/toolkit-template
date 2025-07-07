@@ -1,0 +1,6 @@
+{
+  "name": "{{DISPLAY_NAME}} VPM Repository",
+  "author": "{{AUTHOR_NAME}}",
+  "url": "https://{{REPO_NAME}}.kittyn.cat/index.json",
+  "id": "{{PACKAGE_NAME}}"
+}

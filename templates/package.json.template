@@ -1,0 +1,27 @@
+{
+  "name": "{{PACKAGE_NAME}}",
+  "displayName": "{{DISPLAY_NAME}}",
+  "version": "{{VERSION}}",
+  "unity": "2019.4",
+  "unityRelease": "31f1",
+  "description": "{{DESCRIPTION}}",
+  "type": "{{VCC_PROJECT_TYPE}}",
+  "author": {
+    "name": "{{AUTHOR_NAME}}",
+    "email": "{{AUTHOR_EMAIL}}",
+    "url": "{{AUTHOR_URL}}"
+  },
+  "license": "MIT",
+  "licensesUrl": "https://github.com/{{REPO_OWNER}}/{{REPO_NAME}}/blob/{{DEFAULT_BRANCH}}/LICENSE",
+  "changelogUrl": "https://github.com/{{REPO_OWNER}}/{{REPO_NAME}}/releases",
+  "documentationUrl": "https://github.com/{{REPO_OWNER}}/{{REPO_NAME}}#readme",
+  "dependencies": {},
+  "vpmDependencies": {{VPM_DEPENDENCIES}},
+  "keywords": [
+    "vrchat",
+    "unity",
+    "tool"
+  ],
+  "url": "https://github.com/{{REPO_OWNER}}/{{REPO_NAME}}/releases/download/v{VERSION}/{{PACKAGE_NAME}}-{VERSION}.zip",
+  "samples": []
+}
